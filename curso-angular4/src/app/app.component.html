@@ -2,7 +2,15 @@
   {{title}}
 </h3>
 <hr>
+<nav>
+  <a [routerLink]="['/home']" [routerLinkActive]="['activado']">home | </a>
+  <a [routerLink]="['/empleado']" [routerLinkActive]="['activado']">Empleados | </a>
+  <a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">Frutas | </a>
+  <a [routerLink]="['/contacto']" [routerLinkActive]="['activado']">Contactenos</a>
+</nav>
+<hr>
 <!-- <fruta></fruta> -->
-<empleado-tag></empleado-tag>
+<!-- <empleado-tag></empleado-tag> -->
+<router-outlet></router-outlet>
 
 

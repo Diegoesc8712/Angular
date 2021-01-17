@@ -18,3 +18,8 @@
     font-size: 40px;
     
 }
+
+.activado{
+    font-weight: bold;
+    background-color: cadetblue;
+}
