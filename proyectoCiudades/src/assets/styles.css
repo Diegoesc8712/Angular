@@ -1,0 +1,25 @@
+
+.bordeAzul{
+    border: 8px solid lightblue;
+}
+
+.fondoAzul{
+    background-color: rgb(16, 144, 187);
+    
+}
+
+.fondoVerde{
+    background-color: lightgreen;
+    
+}
+
+
+.letraGrande{
+    font-size: 40px;
+    
+}
+
+.activado{
+    font-weight: bold;
+    background-color: cadetblue;
+}

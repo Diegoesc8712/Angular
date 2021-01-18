@@ -1,0 +1,48 @@
+  .textoCentrado{
+    text-align: center;
+    font-family: montserrat;
+    margin: -30px;
+    font-size: 23px;
+  }
+  nav{
+    width: 100%;
+    text-align: right;
+    background-color: #b5cbcc;
+    float: right;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: -8px;
+  }
+  a{
+    padding: 10px;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }

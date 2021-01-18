@@ -1,0 +1,15 @@
+{{fecha|date:'fullDate'}}
+<pre [ngClass]="['textoCentrado']">
+  <h3>{{title}}</h3>
+</pre>
+<hr>
+<nav>
+  <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home | </a>
+  <a [routerLink]="['/ciudad']" [routerLinkActive]="['activado']">Ciudades</a>
+</nav>
+
+<!-- <fruta></fruta> -->
+<!-- <empleado-tag></empleado-tag> -->
+<router-outlet></router-outlet>
+
+
