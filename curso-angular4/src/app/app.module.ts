@@ -11,6 +11,9 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+import { ConversorPipe } from './pipes/conversores.pipe';
+
+
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     HomeComponent,
     FrutaComponent,
     EmpleadoComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
