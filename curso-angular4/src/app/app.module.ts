@@ -13,7 +13,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { CochesComponent } from './coches/coches.component';
 
 import { ConversorPipe } from './pipes/conversores.pipe';
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -30,6 +30,7 @@ import { ConversorPipe } from './pipes/conversores.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     routing
   ],
   providers: [appRoutingProviders],
