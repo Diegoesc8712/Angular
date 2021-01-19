@@ -1,0 +1,38 @@
+<h1>{{ Titulo }}</h1>
+
+<form #formCiudadNew="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" name="ciudad" #ciudad="ngModel" [(ngModel)]="ciudadnew.ciudad" required>
+            <span *ngIf="ciudad.touched && !ciudad.valid">
+                Ciudad Incorrecta
+            </span>
+    </div>
+    <div>
+        <label for="descripcion">Descripcion:</label>
+        <input type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="ciudadnew.descripcion" required>
+        <span *ngIf="descripcion.touched && !descripcion.valid">
+            Descripcion Incorrecta
+        </span>
+    </div>
+    <div>
+        <label for="poblacion">Población: </label>
+        <input type="text" name="poblacion" #poblacion="ngModel" [(ngModel)]="ciudadnew.poblacion" required pattern="[0-9]+">
+        <span *ngIf="poblacion.touched && !poblacion.valid">
+            Poblacion Incorrecta
+        </span>
+    </div>
+    <div>
+        <select name="estado" #estado #estado="ngModel" [(ngModel)]="ciudadnew.estado" required>
+            <option value="" selected>Estado</option>
+            <option value="Activo" selected>Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+          <span *ngIf="estado.touched && !estado.valid">
+            Poblacion Incorrecta
+        </span>
+    </div>
+    <div>
+        <input type="submit" value="Guardar">
+    </div>
+</form>

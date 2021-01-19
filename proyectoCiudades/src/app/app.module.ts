@@ -8,12 +8,16 @@ import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CiudadComponent } from './ciudad/ciudad.component';
+import { CiudadNewComponent } from './ciudad/ciudadnew.component';
+import { CiudadEditComponent } from './ciudad/ciudadedit.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    CiudadEditComponent,
+    CiudadNewComponent,
     CiudadComponent
   ],
   imports: [

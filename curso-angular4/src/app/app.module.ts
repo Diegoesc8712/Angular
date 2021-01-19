@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { CochesComponent } from './coches/coches.component';
 
 import { ConversorPipe } from './pipes/conversores.pipe';
 
@@ -23,6 +24,7 @@ import { ConversorPipe } from './pipes/conversores.pipe';
     FrutaComponent,
     EmpleadoComponent,
     ContactoComponent,
+    CochesComponent,
     ConversorPipe
   ],
   imports: [

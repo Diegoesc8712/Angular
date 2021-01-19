@@ -14,14 +14,9 @@ export class HomeComponent{
     public titulo = "Página Principal";
     
     constructor(
-        private _ropaServices: CiudadServices,
         private _route: ActivatedRoute,
         private _router: Router
     ){}
-
-    ngOnInit(){
-        console.log(this._ropaServices.prueba('Medellin'));
-    }
 
     redirigir(){
         this._router.navigate(['/ciudad']);

@@ -1,14 +1,23 @@
 import { Component } from '@angular/core';
-import { Empleado } from './ciudad';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
-    selector: 'ciudad-tag',
-    templateUrl: './ciudad.component.html'
+    selector: 'ciudades',
+    templateUrl: './ciudad.component.html',
+    styleUrls: ['./styles.component.css']
   })
 
   export class CiudadComponent {
-    public Titulo = 'Componente Ciudades:';
+    public Titulo = 'Componente Ciudades';
+    constructor(
+      private _route: ActivatedRoute,
+      private _router: Router
+  ){}
 
-    
-    
+    redirigir(){
+      this._router.navigate(['/ciudadNew']);
   }
+  
+  }
+
+  
