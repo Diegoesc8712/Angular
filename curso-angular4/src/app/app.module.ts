@@ -11,6 +11,7 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CochesComponent } from './coches/coches.component';
+import { plantillasComponent } from './plantillas/plantillas.component';
 
 import { ConversorPipe } from './pipes/conversores.pipe';
 import {HttpClientModule} from '@angular/common/http';
@@ -25,6 +26,7 @@ import {HttpClientModule} from '@angular/common/http';
     EmpleadoComponent,
     ContactoComponent,
     CochesComponent,
+    plantillasComponent,
     ConversorPipe
   ],
   imports: [
