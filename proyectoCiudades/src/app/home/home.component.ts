@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { provideRoutes } from '@angular/router';
-import { CiudadServices } from './../services/ciudad.services';
+import { CiudadServices } from '../services/ciudad.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({

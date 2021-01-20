@@ -28,6 +28,7 @@ export class CochesComponent{
         this._peticionesService.getArticulos().subscribe(
             result => {
                 this.articulos = result;
+                console.log(this.articulos);
                 if (!this.articulos) {
                     console.log("Error en el servidor");
                 }

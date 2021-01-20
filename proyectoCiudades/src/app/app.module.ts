@@ -12,6 +12,8 @@ import { CiudadNewComponent } from './ciudad/ciudadnew.component';
 import { CiudadEditComponent } from './ciudad/ciudadedit.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

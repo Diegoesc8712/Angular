@@ -1,9 +1,9 @@
-export class Empleado{
+export class Ciudad{
     constructor(
     public nombre:string,
-    public edad:number,
-    public cargo:string,
-    public contratado:boolean
+    public descripcion:string,
+    public estado:string,
+    public poblacion:string
     ){
 
     }

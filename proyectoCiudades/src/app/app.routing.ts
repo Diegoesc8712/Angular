@@ -7,8 +7,6 @@ import { CiudadComponent } from './ciudad/ciudad.component';
 import { CiudadNewComponent } from './ciudad/ciudadnew.component';
 import { CiudadEditComponent } from './ciudad/ciudadedit.component';
 
-
-
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
