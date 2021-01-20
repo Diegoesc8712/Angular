@@ -11,6 +11,8 @@ import { CiudadComponent } from './ciudad/ciudad.component';
 import { CiudadNewComponent } from './ciudad/ciudadnew.component';
 import { CiudadEditComponent } from './ciudad/ciudadedit.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 
@@ -25,6 +27,7 @@ import { CiudadEditComponent } from './ciudad/ciudadedit.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     routing
   ],
   providers: [appRoutingProviders],

@@ -2,3 +2,13 @@
 <h1>{{Titulo}}</h1>
 
 <button (click)="redirigir()">Crear Ciudad</button>
+
+<div class="listado">
+    <h3>Listado de Ciudades</h3>
+    <ul *ngIf="articulos">
+        <li *ngFor="let articulo of articulos">
+            {{articulo.cityid}} - {{articulo.name}}
+        </li>
+    </ul>
+    <span *ngIf="!articulos">Cargando listado</span>
+</div>

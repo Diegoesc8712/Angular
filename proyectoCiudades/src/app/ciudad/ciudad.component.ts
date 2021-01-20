@@ -24,9 +24,7 @@ import { PeticionesService } from './../services/peticiones.services';
       ngOnInit(){
         this._peticionesService.getArticulos().subscribe(
           result => {
-            console.log('hola');
               this.articulos = result;
-              console.log(this.articulos);
               if (!this.articulos) {
               console.log("Error en el servidor");
               }
