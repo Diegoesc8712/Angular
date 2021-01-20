@@ -9,10 +9,11 @@ export class PeticionesService{
     public url:string;
 
     constructor(private _http: HttpClient){
-        this.url = "https://testing.axon.com.co/pos/api/v1/city";
+        // this.url = "https://testing.axon.com.co/pos/api/v1/city";
+        this.url = "http://localhost/angular11/backend/index.php/ciudades";
     }
 
-    getArticulos(): Observable<any>{
+    getCiudades(): Observable<any>{
         
         return this._http.get(this.url);
                          

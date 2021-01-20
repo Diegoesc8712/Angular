@@ -13,7 +13,7 @@ import { PeticionesService } from './../services/peticiones.services';
 
   export class CiudadComponent {
     public Titulo = 'Componente Ciudades';
-    public articulos;
+    public ciudades;
 
 
     constructor(
@@ -22,10 +22,10 @@ import { PeticionesService } from './../services/peticiones.services';
       private _peticionesService: PeticionesService
   ){}
       ngOnInit(){
-        this._peticionesService.getArticulos().subscribe(
+        this._peticionesService.getCiudades().subscribe(
           result => {
-              this.articulos = result;
-              if (!this.articulos) {
+              this.ciudades = result;
+              if (!this.ciudades) {
               console.log("Error en el servidor");
               }
               },error=>{

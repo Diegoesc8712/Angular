@@ -5,10 +5,10 @@
 
 <div class="listado">
     <h3>Listado de Ciudades</h3>
-    <ul *ngIf="articulos">
-        <li *ngFor="let articulo of articulos">
-            {{articulo.cityid}} - {{articulo.name}}
+    <ul *ngIf="ciudades">
+        <li *ngFor="let ciudad of ciudades">
+            <a href="/ciudadEdit">{{ciudad.name}}</a>
         </li>
     </ul>
-    <span *ngIf="!articulos">Cargando listado</span>
+    <span *ngIf="!ciudades">Cargando listado</span>
 </div>
