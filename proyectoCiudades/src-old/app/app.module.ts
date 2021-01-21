@@ -1,27 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-//rutas
 import { routing, appRoutingProviders } from './app.routing';
 
-// Componentes
+
+
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home.components';
-import { ErrorComponent } from './components/error.components';
-import { ProductosComponent } from './components/productos.component';
-import { ProductosAddComponent } from './components/producto-add.component';
+import { HomeComponent } from './home/home.component';
+import { CiudadComponent } from './ciudad/ciudad.component';
+import { CiudadNewComponent } from './ciudad/ciudadnew.component';
+import { CiudadEditComponent } from './ciudad/ciudadedit.component';
 
 import {HttpClientModule} from '@angular/common/http';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductosComponent,
-    ProductosAddComponent,
-    ErrorComponent
+    CiudadEditComponent,
+    CiudadNewComponent,
+    CiudadComponent
   ],
   imports: [
     BrowserModule,

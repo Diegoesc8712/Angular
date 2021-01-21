@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 #header{
-    background-color: #E03137;
+    background-color: #5f9ea0;
     color: #fff;
     margin: 0px;
     height: 90px;
@@ -24,7 +24,7 @@
 #nav{
     padding: 0px;
     margin: 0px;
-    background-color: rgba(224, 49, 55, 0.67);
+    background-color: #b5cbcc;
 }
 
 #nav ul{
@@ -47,13 +47,13 @@
     padding-left: 10px;
     padding-right: 10px;
     transition: all 300ms;
+    text-decoration: none;
 }
 
 #nav ul li a:hover{
     text-decoration: none;
-    background-color: #E03137;
+    background-color: #5f9ea0;
 }
-
 .activado{
     text-decoration: none;
     border-bottom: 5px solid black;
@@ -65,13 +65,26 @@
     border-radius: 5px;
 }
 
+
+
+button{
+    padding: 10px;
+    background-color: #5f9ea0;
+    cursor: pointer;
+    margin-right: 3px;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #b5cbcc;
+
+}
+
+
 #footer{
     margin-top: 30px;
     padding-top: 10px;
     border-top: 1px solid #eee;
     color: gray;
-}
-
-#form-producto label{
-    margin-top: 10px;
+    text-align: center;
 }

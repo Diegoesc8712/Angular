@@ -1,0 +1,22 @@
+<h3>{{titulo}}</h3>
+<hr>
+<form #formCiudad="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-ciudad">
+    
+    <label>Ciudad</label>
+    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="ciudad.name">
+    
+    <label>Descripción</label>
+    <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="ciudad.description">
+
+    </textarea>
+    
+    <label>Estado</label>
+    <select class="form-control" name="inactive" #inactive="ngModel" [(ngModel)]="ciudad.inactive">
+        <option value="1">Activo</option>
+        <option value="0">Inactivo</option>
+    </select>
+
+    <br>
+    <input type="submit" value="{{titulo}}" class="btn btn-success">
+
+</form>

@@ -1,0 +1,32 @@
+<div id="content" class="col-lg-10 col-lg-offset-1">
+  {{fecha|date:'fullDate'}}
+  <header id="header" class="col-lg-12">
+    <h1>
+      {{ title }}
+    </h1>
+  </header>
+  <nav id="nav" class="col-lg-12">
+    <ul>
+      <li>
+        <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a>
+      </li>
+      <li>
+        <a [routerLink]="['/ciudad']" [routerLinkActive]="['activado']">Ciudades</a>
+      </li>
+      <li>
+        <a [routerLink]="['/ciudadNew']" [routerLinkActive]="['activado']">Crear Ciudad</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="main" class="col-lg-12">
+    <router-outlet></router-outlet>
+  </section>
+
+
+</div>
+<!-- <fruta></fruta> -->
+<!-- <empleado-tag></empleado-tag> -->
+
+  <footer id="footer" class="col-lg-12">
+      <p>Curso de Angual</p>
+  </footer>

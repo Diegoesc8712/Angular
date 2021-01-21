@@ -260,7 +260,7 @@
             'data' => $ciudades
         );
 
-        echo json_encode($ciudades);
+        echo json_encode($result);
     });
 
 
