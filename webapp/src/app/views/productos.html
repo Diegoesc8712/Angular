@@ -1,0 +1,16 @@
+<div class="col-lg-10 col-lg-offset-1">
+    <div class="jumbotron">
+        <h3>{{titulo}}</h3>
+        <div *ngIf="!productos">
+            Cargando Listado de productos...
+        </div> 
+        <div *ngIf="productos">
+            <ul>
+                <li *ngFor="let producto of productos">
+                    <strong>{{ producto.nombre }}</strong>
+                    <p>{{ producto.precio }}$</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

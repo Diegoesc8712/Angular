@@ -21,4 +21,7 @@ export class HomeComponent{
     redirigir(){
         this._router.navigate(['/ciudad']);
     }
+    redirigir2(){
+        this._router.navigate(['/ciudadNew']);
+    }
 }

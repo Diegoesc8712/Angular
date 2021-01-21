@@ -1,19 +1,1 @@
 
-
-.textoCentrado{
-    font-family: montserrat;
-    text-align: center;
-    margin-top: 60px;
-    
-}
-
-button{
-    padding: 10px;
-    background-color: #5f9ea0;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: #b5cbcc;
-
-}

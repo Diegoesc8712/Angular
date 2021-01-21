@@ -1,5 +1,8 @@
-<pre [ngClass]="['textoCentrado']">
-<h3>{{ titulo }}</h3>
-
-<button (click)="redirigir()">Clic aqui para iniciar</button>
-</pre>
+<div class="col-lg-10 col-lg-offset-1">
+    <div class="jumbotron">
+        <h2>{{ titulo }}</h2>
+        <p>Bienvenido al administrador de ciudades</p>
+        <button id="btn1" class="btn btn-lg btn-primary" (click)="redirigir()">Ver Ciudades</button>
+        <button id="btn2" class="btn btn-lg btn-success" (click)="redirigir2()">Crear Ciudades</button>
+      </div>
+</div>
