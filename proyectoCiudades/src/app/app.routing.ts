@@ -7,7 +7,7 @@ import { ErrorComponent } from './components/error.components';
 import { CiudadesComponent } from './components/ciudades.component';
 import { CiudadesAddComponent } from './components/ciudades-add.component';
 import { CiudadDetailComponent } from './components/ciudad.detail.component';
-
+import { CiudadEditComponent } from './components/ciudad-edit.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -15,6 +15,7 @@ const appRoutes: Routes = [
     {path: 'ciudades', component: CiudadesComponent},
     {path: 'crear-ciudad', component: CiudadesAddComponent},
     {path: 'ciudad/:cityid', component: CiudadDetailComponent},
+    {path: 'editar-ciudad/:cityid', component: CiudadEditComponent},
     {path: '**', component: ErrorComponent}
     
 ];

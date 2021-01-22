@@ -12,6 +12,7 @@ import { ErrorComponent } from './components/error.components';
 import { CiudadesComponent } from './components/ciudades.component';
 import { CiudadesAddComponent } from './components/ciudades-add.component';
 import { CiudadDetailComponent } from './components/ciudad.detail.component';
+import { CiudadEditComponent } from './components/ciudad-edit.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
@@ -24,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     CiudadesComponent,
     CiudadesAddComponent,
     CiudadDetailComponent,
+    CiudadEditComponent,
     ErrorComponent
   ],
   imports: [
