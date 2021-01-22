@@ -27,6 +27,18 @@ export class ProductosAddComponent{
     }
 
     onSubmit(){
-        console.log(this.producto);    
+        console.log(this.producto); 
+        this._productoService.addProducto(this.producto).subscribe(
+            response => {
+                if (response.code == 200) {
+                    this._router.navigate(['/home']);
+                }else{
+                    console.log(response);
+                }
+            },
+            error => {
+                console.log(<any>error);
+            }
+        );   
     }
 }

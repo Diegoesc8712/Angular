@@ -2,21 +2,30 @@
 <hr>
 <form #formCiudad="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-ciudad">
     
-    <label>Ciudad</label>
-    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="ciudad.name">
+    <label>
+        Ciudad
+        <span *ngIf="!name.valid && name.touched" class="label label-danger">La ciudad es obligatoria</span>
+    </label>
+    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="ciudad.name" required>
     
-    <label>Descripción</label>
-    <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="ciudad.description">
+    <label>
+        Descripción
+        <span *ngIf="!description.valid && description.touched" class="label label-danger">La descripción es obligatoria</span>
+    </label>
+    <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="ciudad.description" required>
 
     </textarea>
     
-    <label>Estado</label>
-    <select class="form-control" name="inactive" #inactive="ngModel" [(ngModel)]="ciudad.inactive">
+    <label>
+        Estado
+        <span *ngIf="!inactive.valid && inactive.touched" class="label label-danger">El Estado es obligatoria</span>
+    </label>
+    <select class="form-control" name="inactive" #inactive="ngModel" [(ngModel)]="ciudad.inactive" required>
         <option value="1">Activo</option>
         <option value="0">Inactivo</option>
     </select>
 
     <br>
-    <input type="submit" value="{{titulo}}" class="btn btn-success">
+    <input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formCiudad.form.valid">
 
 </form>

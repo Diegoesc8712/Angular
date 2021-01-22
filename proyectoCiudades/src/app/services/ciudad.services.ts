@@ -19,4 +19,12 @@ export class CiudadService{
     getCiudades(): Observable<any>{
         return this._http.get(this.url+'ciudades');
     }
+
+    addCiudad(ciuddad: Ciudad): Observable<any>{   
+        let json = JSON.stringify(ciuddad);
+        let params = 'json='+json;
+        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+         
+        return this._http.post(this.url+'ciudades', params, {headers: headers});
+    }
 }

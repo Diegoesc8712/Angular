@@ -21,13 +21,25 @@ export class CiudadesAddComponent{
         private _ciudadService: CiudadService
     ){
         this.titulo = 'Agregar Ciudad';
-        this.ciudad = new Ciudad(0, 0, '', '', '');
+        this.ciudad = new Ciudad(0, 7, '', '', '');
     }
 
     ngOnInit(){
         console.log('componente ciudad.add cargado');
     }
     onSubmit(){
-        console.log(this.ciudad);    
+        console.log(this.ciudad);   
+        this._ciudadService.addCiudad(this.ciudad).subscribe(
+            response => {
+                if (response.code == 200) {
+                    this._router.navigate(['/ciudades']);
+                }else{
+                    console.log(response);
+                }
+            },
+            error => {
+                console.log(<any>error);
+            }
+        );    
     }
 }
