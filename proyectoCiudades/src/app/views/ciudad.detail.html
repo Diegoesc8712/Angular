@@ -1,0 +1,10 @@
+<div *ngIf="!ciudad">
+    <p>Cargando ciudad...</p>
+</div>
+<div class="row" *ngIf="ciudad">
+    <div class="col-lg-6">
+        <h3>{{ciudad.name}}</h3>
+        <p><strong>{{ciudad.description}}</strong></p>
+        <p>{{ciudad.inactive}}</p>
+    </div>
+</div>

@@ -17,7 +17,14 @@ export class CiudadService{
     }
 
     getCiudades(): Observable<any>{
-        return this._http.get(this.url+'ciudades');
+        let select = this.url+'ciudades';
+        return this._http.get(select).pipe(map(res => res));
+       
+    }
+
+    getCiudad(id): Observable<any>{
+        let select = this.url+'ciudades/'+id;
+        return this._http.get(select).pipe(map(res => res));
     }
 
     addCiudad(ciuddad: Ciudad): Observable<any>{   

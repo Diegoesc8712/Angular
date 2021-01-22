@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home.components';
 import { ErrorComponent } from './components/error.components';
 import { CiudadesComponent } from './components/ciudades.component';
 import { CiudadesAddComponent } from './components/ciudades-add.component';
+import { CiudadDetailComponent } from './components/ciudad.detail.component';
+
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -21,6 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     CiudadesComponent,
     CiudadesAddComponent,
+    CiudadDetailComponent,
     ErrorComponent
   ],
   imports: [

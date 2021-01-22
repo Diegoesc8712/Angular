@@ -121,7 +121,7 @@
         );
         if (isset($_FILES['uploads'])) {
             $piramideUploader = new PiramideUploader();
-            $upload = $piramideUploader->upload('image', "uploads", "uploads", array('image/jpeg', 'image/png', 'image/gif'));
+            $upload = $piramideUploader->upload('image', "uploads", "uploads", array('image/jpeg', 'image/png', 'image/gif', 'image/jpg'));
             $file = $piramideUploader->getInfoFile();
             $file_Name = $file['complete_name'];
 
