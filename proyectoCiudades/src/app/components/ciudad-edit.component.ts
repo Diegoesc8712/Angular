@@ -25,7 +25,6 @@ export class CiudadEditComponent{
         this.ciudad = new Ciudad(1, 1, "", "", "");
     }
     ngOnInit(){
-        console.log('ciudad edit cargado.ts');
         this.getCiudad();
     }
 
@@ -34,7 +33,7 @@ export class CiudadEditComponent{
         
         this._route.params.forEach((params: Params)=>{
             let id=params['cityid'];
-            this._ciudadService.editCiudad(id, this.ciudad).subscribe(
+            this._ciudadService.editCiudad(this.ciudad).subscribe(
                     response => {
                         this._router.navigate(['/ciudades']);
                     },
@@ -44,19 +43,15 @@ export class CiudadEditComponent{
                 );   
     
             });
-
-    }
+        }
+    
 
     getCiudad(){
         this._route.params.forEach((params: Params)=>{
             let id=params['cityid'];
                 this._ciudadService.getCiudad(id).subscribe(
                     response => {
-                        if (response.code == 200) {
-                            this.ciudad = response.data;
-                        }else{
-                            this._router.navigate(['/ciudades']);
-                        }
+                        this.ciudad = response[0];
                     },
                     error => {
                         console.log(<any>error);

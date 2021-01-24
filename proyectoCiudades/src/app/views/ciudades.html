@@ -10,11 +10,16 @@
                 <div class="imagen_relleno"></div>
                 <div class="caption">
                     <h3>{{ ciudad.name }}</h3>
-                    <p>
+                    <div class="botones" *ngIf="confirmado != ciudad.cityid">
                         <a [routerLink]="['/ciudad', ciudad.cityid]" class="btn btn-md" style="background-color: #5f9ea0; color: white;">ver</a> 
                         <a [routerLink]="['/editar-ciudad', ciudad.cityid]" class="btn btn-md" style="background-color: #b5cbcc; color: white;">Editar</a> 
-                        <a href="" class="btn btn-md" style="background-color: #5f9ea0; color: white;">Eliminar</a> 
-                    </p>
+                        <a (click)="borrarConfirm(ciudad.cityid)" class="btn btn-md" style="background-color: #5f9ea0; color: white;">Eliminar</a> 
+                    </div>
+                    <div class="seguro" *ngIf="confirmado == ciudad.cityid">
+                        <p>Esta seguro de querer borrar la ciudad</p>
+                        <a (click)="onDeleteCiudad(ciudad.cityid)" class="btn btn-md" style="background-color: #5f9ea0; color: white;">Aceptar</a>
+                        <a (click)="cancelarConfirm()" class="btn btn-md" style="background-color: #b5cbcc; color: white;">Cancelar</a>
+                    </div>
                 </div>
             </div>
         </div>

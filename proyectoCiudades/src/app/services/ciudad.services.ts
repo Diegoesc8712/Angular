@@ -16,30 +16,40 @@ export class CiudadService{
         this.url = GLOBAL.url;
     }
 
+    addCiudad(ciudad: Ciudad): Observable<any>{   
+        let params = JSON.stringify(ciudad);
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+         
+        return this._http.post(this.url, params, {headers: headers});
+    }
+
     getCiudades(): Observable<any>{
-        let select = this.url+'ciudades';
+        let select = this.url;
         return this._http.get(select).pipe(map(res => res));
        
     }
 
     getCiudad(id): Observable<any>{
-        let select = this.url+'ciudades/'+id;
+        let select = this.url+"/"+id;
         return this._http.get(select).pipe(map(res => res));
     }
 
-    addCiudad(ciudad: Ciudad): Observable<any>{   
-        let json = JSON.stringify(ciudad);
-        let params = 'json='+json;
-        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-         
-        return this._http.post(this.url+'ciudades', params, {headers: headers}).pipe(map(res => res));
+
+    
+    deleteCiudad(id): Observable<any> {
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+        let select = this.url+"/"+id;
+        return this._http.delete(select, {headers: headers});
+    
     }
 
-    editCiudad(id, ciudad:Ciudad){
-        let json = JSON.stringify(ciudad);
-        let params = 'json='+json;
-        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+    editCiudad(ciudad: Ciudad): Observable<any> {
+
+        let params = JSON.stringify(ciudad);
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+        let select = this.url+"/"+ciudad.cityid;
+
+        return this._http.patch(select, params, {headers: headers});
         
-        return this._http.post(this.url+'update-ciudad/'+id, params, {headers: headers}).pipe(map(res => res));
     }
 }

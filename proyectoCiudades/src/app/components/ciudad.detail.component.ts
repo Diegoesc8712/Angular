@@ -23,7 +23,6 @@ export class CiudadDetailComponent{
         
     }
     ngOnInit(){
-        console.log('ciudad detail cargado.ts');
         this.getCiudad();
     }
 
@@ -33,11 +32,11 @@ export class CiudadDetailComponent{
 
             this._ciudadService.getCiudad(id).subscribe(
                 response => {
-                    if (response.code == 200) {
-                        this.ciudad = response.data;
-                    }else{
-                        this._router.navigate(['/ciudades']);
-                    }
+                    this.ciudad = response[0];
+                    // if (response.code == 200) {
+                    // }else{
+                    //     this._router.navigate(['/ciudades']);
+                    // }
 
                 },
                 error => {

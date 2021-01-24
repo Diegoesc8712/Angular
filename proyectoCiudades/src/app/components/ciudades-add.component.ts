@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { CiudadService } from './../services/ciudad.services';
-
-
 import { Ciudad } from './models/ciudad';
 
 @Component({
@@ -21,17 +19,16 @@ export class CiudadesAddComponent{
         private _ciudadService: CiudadService
     ){
         this.titulo = 'Agregar Ciudad';
-        this.ciudad = new Ciudad(0, 7, '', '', '');
+        this.ciudad = new Ciudad(8, 7, '', '', '');
     }
 
     ngOnInit(){
-        console.log('componente ciudad.add cargado');
+        
     }
     onSubmit(){
-        console.log(this.ciudad);   
         this._ciudadService.addCiudad(this.ciudad).subscribe(
             response => {
-                if (response.code == 200) {
+                if (response[0]) {
                     this._router.navigate(['/ciudades']);
                 }else{
                     console.log(response);
