@@ -1,3 +1,25 @@
+<h4>propiedades input en angular</h4>
+    <componente-hijo 
+        [texto1] ="dato_externo"
+        [texto2] ="identy.web"
+
+        (desde_el_hijo)="recibirDatos($event)"
+
+    ></componente-hijo>
+
+<hr>
+<div *ngIf="datos_del_hijo">
+    <h1>{{datos_del_hijo.nombre}}</h1>
+    <h3>{{datos_del_hijo.web}}</h3>
+    <h6>{{datos_del_hijo.twitter}}</h6>
+</div>
+<hr>
+
+
+
+
+
+
 <h4>{{titulo}}</h4>
 
 
